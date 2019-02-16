@@ -4,6 +4,7 @@ title:      "微服务框架"
 subtitle:   "（一）Spring Boot + Dubbo + Docker 框架特性简述"
 date:       2018-07-15 12:00:00
 author:     "Tillend"
+catalog:      true
 header-img: "img/post-bg-2015.jpg"
 tags:
     - Spring Boot
