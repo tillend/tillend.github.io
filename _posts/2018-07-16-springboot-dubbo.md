@@ -199,6 +199,7 @@ dubbo.registry.id = my-registry
 dubbo.registry.address = zookeeper://localhost:2181
 ```
 
+
 ---
 参考资料：
  1. [Dubbo Spring Boot官方文档](https://github.com/apache/incubator-dubbo-spring-boot-project/blob/master/README_CN.md)
