@@ -20,7 +20,7 @@ future: true
 
 # SNS settings
 RSS: false
-weibo_username:     tillend
+weibo_username:     darkhadis
 zhihu_username:     tillend
 github_username:    tillend
 #twitter_username:  tillend
