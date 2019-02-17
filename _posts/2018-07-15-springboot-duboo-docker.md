@@ -82,7 +82,7 @@ tags:
 　　Spring Boot通过起步依赖为项目的依赖管理提供帮助。如上述代码中Spring集成Mybatis的过程中，需注意相关库的Group、Artifact及version，在经过测试后方能排除依赖冲突及解决不兼容的情况。
   
 　　起步依赖其实就是特殊的Maven和Gradle依赖，利用了依赖管理中的传递依赖解析特性，把经过测试的常用库聚合在一起，组成了为特定功能而定制的依赖。
-![这里写图片描述](https://img-blog.csdn.net/20180714234157300?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3doeV9zdGlsbF9jb25mdXNlZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![这里写图片描述](img/in-post/post-2018-07-15/starter.png)
 
 #### 命令行界面
 　　Spring Boot CLI利用了自动配置和起步依赖，使开发人员能专注于代码。CLI会检测到代码中正在使用的特定类，自动解析合适的依赖库来支持那些类，还可以检测到当前运行的是一个Web容器，并自动引入嵌入式Web容器以供应用程序运行时使用。
