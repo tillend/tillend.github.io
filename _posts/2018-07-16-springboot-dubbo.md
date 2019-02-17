@@ -1,4 +1,18 @@
-﻿　　此系列文章将会描述Java框架**Spring Boot**、服务治理框架**Dubbo**、应用容器引擎**Docker**，及使用Spring Boot集成Dubbo、Mybatis等开源框架，其中穿插着Spring Boot中日志切面等技术的实现，然后通过gitlab-CI以持续集成为Docker镜像。
+﻿---
+layout:     post
+title:      "微服务框架"
+subtitle:   "（二）Spring Boot 集成 Dubbo"
+date:       2018-07-16 12:00:00
+author:     "Tillend"
+catalog:      true
+header-img: "img/post-bg-2015.jpg"
+tags:
+    - Spring Boot
+    - Dubbo
+    
+---
+
+　　此系列文章将会描述Java框架**Spring Boot**、服务治理框架**Dubbo**、应用容器引擎**Docker**，及使用Spring Boot集成Dubbo、Mybatis等开源框架，其中穿插着Spring Boot中日志切面等技术的实现，然后通过gitlab-CI以持续集成为Docker镜像。
 
 　　**本文为此Spring Boot通过使用起步依赖dubbo-spring-boot-starter及自动装配的方式集成Dubbo。**
 
