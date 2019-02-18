@@ -1,7 +1,7 @@
 ﻿---
 layout:     post
-title:      "微服务框架"
-subtitle:   "（二）Spring Boot 集成 Dubbo"
+title:      "Spring Boot 集成 Dubbo"
+subtitle:   "微服务框架（二）"
 date:       2018-07-16 12:00:00
 author:     "Tillend"
 catalog:      true
