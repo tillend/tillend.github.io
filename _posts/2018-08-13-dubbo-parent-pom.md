@@ -35,7 +35,7 @@ dubbo通用POM通过以下配置引用
 
 ## 自定义的Maven属性
 
-### maven参数
+#### maven参数
 
 ```xml
 <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -44,7 +44,7 @@ dubbo通用POM通过以下配置引用
 <nexus.url>N/A</nexus.url>
 ```
 
-### dubbo依赖版本
+#### dubbo依赖版本
 
 ```xml
 <dubbo.version>2.6.2</dubbo.version>
@@ -80,7 +80,7 @@ dubbo通用POM通过以下配置引用
 
 `dubbo`通用的项目依赖，主要包括`dubbo`、`spring boot`、`mybatis`等起步依赖及`dubbo`相关的性能调优依赖
 
-### 项目必须继承的依赖
+#### 项目必须继承的依赖
 
 | groupId  | artifactId  | version  | scope(默认为compile) | description |
 |---|---|---|---|---|---|
@@ -173,9 +173,10 @@ dubbo通用POM通过以下配置引用
 ```
 	
 	
-### 项目可选继承的依赖
+#### 项目可选继承的依赖
+
 | groupId  | artifactId  | version  | scope(默认为compile) | description |
-|---|---|---|---|---|---|
+|---|---|---|---|---|
 | org.mybatis.spring.boot  | mybatis-spring-boot-starter | 1.3.2  |  | springboot集成mybatis |
 | org.springframework.boot  | spring-boot-starter-jdbc | 2.0.3.RELEASE  |  | spring-boot jdbc |
 | org.springframework.boot  | spring-boot-autoconfigure | 2.0.3.RELEASE  |  | spring-boot autoconfigure |
@@ -268,7 +269,7 @@ dubbo通用POM通过以下配置引用
 
 包括项目的源码目录配置、输出目录配置、插件配置、插件管理配置等
 
-### 项目输出目录配置
+#### 项目输出目录配置
 
 ```xml
 <resources>
@@ -299,7 +300,7 @@ dubbo通用POM通过以下配置引用
 </resources>
 ```
 
-### 插件管理配置
+#### 插件管理配置
 
 ```xml
 <pluginManagement><!-- lock down plugins versions to avoid using Maven 
@@ -333,7 +334,7 @@ dubbo通用POM通过以下配置引用
 </pluginManagement>
 ```
 
-### JAVA源码插件
+#### JAVA源码插件
 
 ```xml
 <plugin>
@@ -350,7 +351,7 @@ dubbo通用POM通过以下配置引用
 </plugin>
 ```
 
-### JAVA文档插件
+#### JAVA文档插件
 
 ```xml
 <plugin>
@@ -378,9 +379,10 @@ dubbo通用POM通过以下配置引用
 		</execution>
 	</executions>
 </plugin>
-```	
-			
-### jar生成插件
+```
+
+#### jar生成插件
+
 继承POM后需在`properties`中定义`springboot.starter`变量，值为spring-boot启动类路径
 
 ```xml
@@ -406,7 +408,7 @@ dubbo通用POM通过以下配置引用
 </plugin>
 ```
 
-### 项目依赖拷贝插件
+#### 项目依赖拷贝插件
 
 ```xml
 <plugin>
@@ -430,7 +432,7 @@ dubbo通用POM通过以下配置引用
 </plugin>
 ```
 
-### Docker镜像化插件
+#### Docker镜像化插件
 
 使用方法详见[Docker镜像化Dubbo微服务](https://blog.csdn.net/why_still_confused/article/details/81391827)，详细信息可见[官方文档](https://github.com/spotify/docker-maven-plugin)
 

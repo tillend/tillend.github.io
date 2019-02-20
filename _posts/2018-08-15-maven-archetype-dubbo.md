@@ -174,8 +174,7 @@ package ${package}.handler;
 ```
 
 
-![项目结构图](https://img-blog.csdn.net/20180815190018384?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3doeV9zdGlsbF9jb25mdXNlZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
-
+![项目结构图](/img/in-post/post-2018-08/archetype.png)
 ## 本地使用
 
 本地使用archetype只需`install`后使用相应archetype
@@ -204,8 +203,7 @@ mvn rchetype:update-local-catalog
 
 推送至私有仓库后，只需在eclipse或idea中创建Maven项目，添加对应archetype即可
 
-![这里写图片描述](https://img-blog.csdn.net/20180815190027792?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3doeV9zdGlsbF9jb25mdXNlZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
-
+![这里写图片描述]((/img/in-post/post-2018-08/archetype-add.png)
 
 
 ## archetype命令
