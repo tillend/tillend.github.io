@@ -9,6 +9,7 @@ header-img: "img/post-bg-alitrip.jpg"
 tags:
 	- Docker
     - Dubbo
+    
 ---
 
 　　此系列文章将会描述Java框架**Spring Boot**、服务治理框架**Dubbo**、应用容器引擎**Docker**，及使用Spring Boot集成Dubbo、Mybatis等开源框架，其中穿插着Spring Boot中日志切面等技术的实现，然后通过gitlab-CI以持续集成为Docker镜像。
@@ -22,7 +23,7 @@ tags:
 
 > 需要打包为docker镜像的项目，artifactId请设置为**无特殊字符的小写字母字串**，否则docker-maven-plugin会出错
 
-### 配置docker-maven-plugin插件
+#### 配置docker-maven-plugin插件
 
 `maven` `pom.xml`加入`com.spotify:docker-maven-plugin`插件配置(配置对应properties)
 
@@ -68,7 +69,7 @@ tags:
 </properties>
 ```
 
-### 编写Dockerfile
+#### 编写Dockerfile
 
 Dockerfile文件路径需在docker-maven-plugin插件配置
 
@@ -96,7 +97,7 @@ EXPOSE 9702
 ENTRYPOINT ["java", "-Duser.timezone=Asia/Shanghai", "-jar", "/app.jar"]
 ```
 
-### 编写CI文件
+#### 编写CI文件
 
 编写CI文件.gitlab-ci.yaml，将docker镜像打包设置为手动触发
 
@@ -113,7 +114,7 @@ deploy_docker:
   - master
 ```
 
-### 查看并运行镜像
+#### 查看并运行镜像
 
 **查看镜像**
 

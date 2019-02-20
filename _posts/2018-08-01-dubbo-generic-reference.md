@@ -26,7 +26,7 @@ Dubbo一般在内部系统间，通过RPC调用，正常情况下服务消费方
 
 > 泛化调用组件依赖需添加对应服务接口的jar包
 
-### 控制器
+#### 控制器
 
  1. **获取泛化服务接口**
  2. **组装服务调用参数**
@@ -64,7 +64,7 @@ public class GenericController {
 }
 ```
 
-### 泛化引用接口
+#### 泛化引用接口
 
 Dubbo支持的泛化引用接口，可通过在 Spring Boot 配置申明 `generic="true"`使用，详见[泛化引用](http://dubbo.apache.org/#!/docs/user/demos/generic-reference.md?lang=zh-cn)
 
@@ -105,7 +105,7 @@ public interface GenericService {
 ```
 
 
-### 工具类
+#### 工具类
 
 **DubboUtils:**
 
@@ -195,7 +195,7 @@ public class DubboUtils {
 }
 ```
 
-### 启动器
+#### 启动器
 
 若要使用不同的Web容器，需引入对应的Spring Boot启动依赖，e.g
 
@@ -225,7 +225,7 @@ public class Starter {
 ```
 
 
-### 请求模型
+#### 请求模型
 
 ```java
 public class GenericReqModel implements Serializable {
@@ -251,13 +251,13 @@ public class GenericReqModel implements Serializable {
 
 ## POSTMAN使用方法
 
-### 1.Headers配置
+#### 1.Headers配置
 
 | Key | Value |
 |---|---|
 |Content-Type | application/json|
 
-### 2.参数配置(Params)
+#### 2.参数配置(Params)
 
 | Key | Value |
 |--|--|
@@ -268,7 +268,7 @@ public class GenericReqModel implements Serializable {
 |method| getWord |
 |paramValues| [{}]|
 
-### 3.调用示例
+#### 3.调用示例
 ![这里写图片描述](/img/in-post/post-2018-08/postman.png)
 
 

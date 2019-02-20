@@ -24,14 +24,14 @@ tags:
 
 　　我们将使用[Spring Initializr](https://start.spring.io/)工具快速设置项目。
 
-### Spring Boot Redis项目设置
+#### Spring Boot Redis项目设置
 
 　　我们将使用Spring Initializr工具快速设置项目。我们将使用3个依赖项，如下所示：
 ![spring boot redis cache示例](/img/in-post/post-2018-09/spring-redis-project-setup.png)
 
 　　下载项目并解压缩。我们使用H2数据库依赖，因为我们将使用嵌入式数据库，一旦应用程序停止，该数据库将丢失所有数据。
 
-### Maven依赖项
+#### Maven依赖项
 　　虽然我们已经使用该工具完成了自动设置，但如果您想手动设置它，我们将为此项目使用Maven构建系统，这里是我们使用的依赖项：
 
 ```xml
@@ -90,7 +90,7 @@ tags:
 
 　　确保从[maven中央仓库](https://mvnrepository.com/)使用Spring Boot的稳定版本。
 
-### 定义模型
+#### 定义模型
 　　要将对象保存到Redis数据库，我们使用基本字段定义Person模型对象：
 
 ```java
@@ -129,7 +129,7 @@ public class User implements Serializable {
 ```
 　　这是一个标准的POJO，有getters 和 setters。
 
-### 配置Redis缓存
+#### 配置Redis缓存
 　　使用Spring Boot集成了Redis相关的起步依赖后，我们可以在`application.properties`文件中定义只有三行的配置来使用本地Redis实例：
 
 ```
@@ -185,7 +185,7 @@ public class Application implements CommandLineRunner {
 
 　　我们已经添加了一个CommandLineRunner，因为我们想要在嵌入式H2数据库中填充一些示例数据。
 
-### 定义存储库
+#### 定义存储库
 　　在我们展示Redis如何工作之前，我们将为JPA相关功能定义一个Repository：
 
 ```java
@@ -199,7 +199,7 @@ public interface UserRepository extends JpaRepository { }
 ```
 　　它现在没有方法调用，因为我们不需要任何方法调用。
 
-### 定义控制器
+#### 定义控制器
 　　**控制器**是调用Redis缓存以进行操作的位置。实际上，这是最好的地方，因为缓存与它直接相关，请求甚至不必进入具体业务逻辑的服务代码来等待缓存的结果。
 
 　　这是控制器骨架：
@@ -258,7 +258,7 @@ localhost:8090/2
 
 　　注意什么？我们进行了四次API调用，但只有三个日志语句。这是因为具有ID 2的用户拥有29000个关注者，因此，它的数据被缓存。这意味着当为它进行API调用时，数据从缓存中返回，并且没有为此进行数据库调用！
 
-### 更新缓存
+#### 更新缓存
 　　每当更新其实际对象值时，缓存值也应更新。这可以使用`@CachePut`注解完成：
 
 ```java
@@ -271,7 +271,7 @@ public User updatePersonByID(@RequestBody User user) {
 ```
 　　这样，一个人再次通过他的ID识别并用结果更新。
 
-### 清除缓存
+#### 清除缓存
 　　如果要从实际数据库中删除某些数据，则不再需要将其保留在缓存中。我们可以使用`@CacheEvict`注解清除缓存数据：
 
 ```java

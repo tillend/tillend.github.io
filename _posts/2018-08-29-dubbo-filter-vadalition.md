@@ -21,18 +21,18 @@ tags:
 Dubbo 的扩展点加载从 JDK 标准的 SPI (Service Provider Interface) 扩展点发现机制加强而来。
 Dubbo改进了 JDK 标准的 SPI的一些问题，详见[拓展点加载](http://dubbo.apache.org/zh-cn/docs/dev/SPI.html)
 
-### 约定
+#### 约定
 
 在扩展类的 jar包内 ，放置扩展点配置文件`META-INF/dubbo/`接口全限定名，内容为：配置名=扩展实现类全限定名，多个实现类用换行符分隔。
 
-### 示例
+#### 示例
 
 以扩展 Dubbo 的协议为例，在协议的实现 jar 包内放置文本文件：`META-INF/dubbo/com.alibaba.dubbo.rpc.Filter`，内容为：
 ```
 global=com.test.filter.GlobalExceptionFilter
 ```
 
-### 使用配置
+#### 使用配置
 
 Dubbo 配置模块中，扩展点均有对应配置属性或标签，通过配置指定使用哪个扩展实现。比如：
 ```xml
@@ -45,7 +45,7 @@ Dubbo 配置模块中，扩展点均有对应配置属性或标签，通过配�
 dubbo.provider.filter = global
 ```
 
-### 拓展项目路径
+#### 拓展项目路径
 
 ```
 project
@@ -64,7 +64,7 @@ project
 
 ## 调用拦截拓展
 
-### Filter SPI
+#### Filter SPI
 
 > // before filter
       Result result = invoker.invoke(invocation);
@@ -94,13 +94,13 @@ public interface Filter {
 }
 ```
 
-### 实现Filter接口
+#### 实现Filter接口
 
 ```java
 public class GlobalExceptionFilter<T> implements Filter {}
 ```
 
-### GlobalExceptionFilter
+#### GlobalExceptionFilter
 
 > 逻辑为依层级捕捉消化异常，转换为相应的响应码
 
@@ -125,7 +125,7 @@ try {
 }
 ```
 
-### Validation Error
+#### Validation Error
 ```java
 if (e.getCause() != null
 		&& e.getCause() instanceof ConstraintViolationException) {
@@ -147,7 +147,7 @@ if (e.getCause() != null
 
 ## 参数校检拓展
 
-### 校检器
+#### 校检器
 
 > 根据校检器工厂创建校检器
 
@@ -171,7 +171,7 @@ public GlobalValidator(URL url) {
 }
 ```
 
-### 异常封装
+#### 异常封装
 
 > 参数校检错误时自定义错误信息，封装为RPCException
 
