@@ -9,6 +9,7 @@ header-img: "img/post-bg-alitrip.jpg"
 tags:
     - Spring Boot
     - Redis
+    - 译
 ---
 
 　　此系列文章将会描述Java框架**Spring Boot**、服务治理框架**Dubbo**、应用容器引擎**Docker**，及使用Spring Boot集成Dubbo、Mybatis等开源框架，其中穿插着Spring Boot中日志切面等技术的实现，然后通过gitlab-CI以持续集成为Docker镜像。
@@ -26,7 +27,7 @@ tags:
 ### Spring Boot Redis项目设置
 
 　　我们将使用Spring Initializr工具快速设置项目。我们将使用3个依赖项，如下所示：
-![spring boot redis cache示例](https://cdn.journaldev.com/wp-content/uploads/2018/01/spring-redis-project-setup.png)
+![spring boot redis cache示例](/img/in-post/post-2018-09/spring-redis-project-setup.png)
 
 　　下载项目并解压缩。我们使用H2数据库依赖，因为我们将使用嵌入式数据库，一旦应用程序停止，该数据库将丢失所有数据。
 
@@ -292,6 +293,7 @@ mvn spring-boot:run
 
 ## Redis缓存限制
 　　尽管Redis速度非常快，但在64位系统上存储任何数据量仍然没有限制。它只能在32位系统上存储3GB的数据。更多可用内存可以带来更高的命中率，但是一旦Redis占用太多内存，会导致Redis停止。
+
 　　当缓存大小达到内存限制时，将删除旧数据以替换新数据。
 
 ## 总结
@@ -299,4 +301,5 @@ mvn spring-boot:run
 
 ---
 原文地址：[Spring Boot Redis Cache](https://www.journaldev.com/18141/spring-boot-redis-cache) written by Shubham
+
 完整代码：[下载地址](https://www.journaldev.com/wp-content/uploads/spring/Spring-Boot-Redis-Cache.zip)
