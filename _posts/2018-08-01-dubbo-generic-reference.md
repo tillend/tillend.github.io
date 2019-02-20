@@ -28,9 +28,9 @@ Dubbo一般在内部系统间，通过RPC调用，正常情况下服务消费方
 
 ### 控制器
 
-  **1. 获取泛化服务接口**
-  **2. 组装服务调用参数**
-  **3. 调用接口、封装数据**
+ 1. **获取泛化服务接口**
+ 2. **组装服务调用参数**
+ 3. **调用接口、封装数据**
 
 ```java
 @RestController
@@ -66,7 +66,7 @@ public class GenericController {
 
 ### 泛化引用接口
 
-Dubbo支持的泛化引用接口，可通过在 Spring Boot 配置申明 generic="true"使用，详见[泛化引用](http://dubbo.apache.org/#!/docs/user/demos/generic-reference.md?lang=zh-cn)
+Dubbo支持的泛化引用接口，可通过在 Spring Boot 配置申明 `generic="true"`使用，详见[泛化引用](http://dubbo.apache.org/#!/docs/user/demos/generic-reference.md?lang=zh-cn)
 
 > 在此组件中无需配置即可使用
 
@@ -269,8 +269,7 @@ public class GenericReqModel implements Serializable {
 |paramValues| [{}]|
 
 ### 3.调用示例
-![这里写图片描述](https://img-blog.csdn.net/2018080123062484?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3doeV9zdGlsbF9jb25mdXNlZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
-
+![这里写图片描述](/img/in-post/post-2018-08/postman.png)
 
 
 ---

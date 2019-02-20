@@ -26,7 +26,7 @@ tags:
 
 > 在多环境配置下常使用`application.properties`只配置`spring.profiles.active`属性，以起选择对应环境的配置文件的作用
 
-![这里写图片描述](/img/in-post/post-2018-07-15/application.png)
+![这里写图片描述](/img/in-post/post-2018-07/application.png)
 
 如上中，`application.properties`只需要配置`spring.profiles.active = dev`来选择配置文件，Spring Boot会自动加载config包下`application-dev.properties`的配置
 
