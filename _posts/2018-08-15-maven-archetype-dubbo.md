@@ -203,7 +203,7 @@ mvn rchetype:update-local-catalog
 
 推送至私有仓库后，只需在eclipse或idea中创建Maven项目，添加对应archetype即可
 
-![这里写图片描述]((/img/in-post/post-2018-08/archetype-add.png)
+![这里写图片描述](/img/in-post/post-2018-08/archetype-add.png)
 
 
 ## archetype命令
