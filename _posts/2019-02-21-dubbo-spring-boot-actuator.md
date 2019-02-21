@@ -1,4 +1,4 @@
-﻿﻿---
+﻿---
 layout:     post
 title:      "Dubbo Spring Boot 生产就绪特性"
 subtitle:   "dubbo-spring-boot-actuator"
@@ -197,6 +197,6 @@ management.endpoint.dubbo-properties.enabled = true
 
 
 ---
-参考资料：
-1.[Dubbo Spring Boot Production-Ready](https://github.com/apache/incubator-dubbo-spring-boot-project/blob/master/dubbo-spring-boot-actuator/README_CN.md)
+参考资料：    
+1.[Dubbo Spring Boot Production-Ready](https://github.com/apache/incubator-dubbo-spring-boot-project/blob/master/dubbo-spring-boot-actuator/README_CN.md)    
 2.[Securing HTTP Endpoints](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html#production-ready-endpoints-security)
