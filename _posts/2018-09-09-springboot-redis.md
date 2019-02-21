@@ -300,5 +300,5 @@ mvn spring-boot:run
 　　在本文中，我们了解了Redis Cache为我们提供了快速数据交互的强大功能，以及我们如何将它与Spring Boot集成在一起，只需极少但功能强大的配置。
 
 ---
-原文地址：[Spring Boot Redis Cache](https://www.journaldev.com/18141/spring-boot-redis-cache) written by Shubham 
+原文地址：[Spring Boot Redis Cache](https://www.journaldev.com/18141/spring-boot-redis-cache) written by Shubham    
 完整代码：[下载地址](https://www.journaldev.com/wp-content/uploads/spring/Spring-Boot-Redis-Cache.zip)
