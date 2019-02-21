@@ -120,7 +120,7 @@ docker run -d \
 
 ## Docker常用命令
 
-![这里写图片描述](https://img-blog.csdn.net/20180816143528351?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3doeV9zdGlsbF9jb25mdXNlZA==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+![这里写图片描述](/img/in-post/post-2018-08/docker-command.png)
 
 查看容器状态
 ```bash
