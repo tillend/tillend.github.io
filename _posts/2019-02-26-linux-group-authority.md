@@ -99,13 +99,13 @@ dr-xr-xr-x   4 root root 4096 Apr 19  2018 boot
 ![](/img/in-post/post-2019-02/authority.png)
 
 - 第一个字符代表这个文件的类型(如目录、文件或链接文件等等)：
-    - 当为[`d`]则是目录,例如上表档名为『.gconf』的那一行；
-    - 当为[`-`]则是文件,例如上表档名为『install.log』那一行；
+    - 当为[`d`]则是目录
+    - 当为[`-`]则是文件
     - 若是[`l`]则表示为连结档(link file)；
     - 若是[`b`]则表示为装置文件里面的可供储存的接口设备(可随机存取装置)；
     - 若是[`c`]则表示为装置文件里面的串行端口设备,例如键盘、鼠标(一次性读取装置)
 - 接下来的字符中,以三个为一组,且均为『`rwx`』的三个参数的组合
-([`r`]代表可读(read)、[`w`]代表可写(write)、[`x`]代表可执行(execute) 要注意的是,这三个权限的位置不会改变,如果没有权限,就会出现减号[`-`]而已)
+([`r`]代表可读(read)、[`w`]代表可写(write)、[`x`]代表可执行(execute) 若无权限,则为减号[`-`])
     - 第一组为『文件拥有者的权限』
     - 第二组为『同群组的权限』
     - 第三组为『其他非本群组的权限』
@@ -153,5 +153,5 @@ chmod a+x install.sh
 
 ---
 参考资料：    
-1.[linux文件属性与权限](https://www.cnblogs.com/kzloser/articles/2673790.html)
+1.[linux文件属性与权限](https://www.cnblogs.com/kzloser/articles/2673790.html)    
 2.[Linux 文件基本属性](http://www.runoob.com/linux/linux-file-attr-permission.html)
