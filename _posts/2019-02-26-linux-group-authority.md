@@ -35,7 +35,7 @@ Linux 系统中的目录和文件的访问身份分为`user`, `group`,`others`,`
 
 #### chgrp
 
-> `chgrp`命令用于变更文件或目录的所属群组
+`chgrp`命令用于变更文件或目录的所属群组
 
 > chgrp [OPTION]... GROUP FILE... 
 > chgrp [参数]... [所在组] 文件或目录
@@ -48,7 +48,7 @@ chgrp www install.sh
 
 #### chown
 
-> `chown`命令用于改变文件拥有者    
+`chown`命令用于改变文件拥有者    
 
 > chown [OPTION]... [OWNER][:[GROUP]] FILE...    
 > chown [参数]... [所有者][:[所在组]] 文件或目录
@@ -61,8 +61,8 @@ chown www:www install.sh
 
 #### chmod
 
-> Linux/Unix 的文件调用权限分为三级: 文件拥有者、群组、其他。利用`chmod`可以藉以控制文件如何被他人所调用。    
-> 使用权限: 所有使用者    
+Linux/Unix 的文件调用权限分为三级: 文件拥有者、群组、其他。利用`chmod`可以藉以控制文件如何被他人所调用。    
+使用权限: 所有使用者    
 
 > chmod [OPTION]... MODE[,MODE]... FILE...    
 > chown [参数]... [模式][,模式] 文件或目录
@@ -71,7 +71,7 @@ chown www:www install.sh
 
 #### umask
 
-> `umask`可用来设定[权限掩码]。[权限掩码]是由3个八进制的数字所组成，将现有的存取权限减掉权限掩码后，即可产生建立文件时预设的权限。
+`umask`可用来设定[权限掩码]。[权限掩码]是由3个八进制的数字所组成，将现有的存取权限减掉权限掩码后，即可产生建立文件时预设的权限。
 
 > umask [-S][权限掩码]
 
