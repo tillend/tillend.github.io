@@ -40,26 +40,26 @@ tags:
 
 部署时绑定容器内外IP，可使用获取内网IP命令
 ```bash
-ip=$(ip addr | grep inet | grep -v inet6 | grep eth0 | awk '{print $2}' |awk -F "/" '{print $1}')
+ip=$(ip addr | grep inet | grep -v inet6 | grep eth0 | awk '{print $2}' |awk -F '/' '{print $1}')
 ```
 
 #### 网络接口及数据卷
 
 ```bash
  # 创建网络接口
-sudo docker network create zookeeper
-sudo docker network create dubbo
+docker network create zookeeper
+docker network create dubbo
 
  # volumn创建，用来持久化数据
-sudo docker volume create background
-sudo docker volume create dubbo
+docker volume create background
+docker volume create dubbo
 ```
 
 #### Zookeeper
 
 ```bash
  # zookeeper注册中心
-sudo docker run -d \
+docker run -d \
 	--name zookeeper \
 	--net zookeeper \
 	--net dubbo \
@@ -122,43 +122,50 @@ docker run -d \
 
 ![这里写图片描述](/img/in-post/post-2018-08/docker-command.png)
 
+> 命令里使用`${CONTAINER_ID}`与`${CONTAINER_NAME}`均可
+
 查看容器状态
-```bash
+```
 docker ps | grep ${CONTAINER_ID}
 ```
 
 查看容器日志
-```bash
+```
 docker logs ${CONTAINER_ID}
 ```
 
 交互式进入容器中
-```bash
-docker exec -i -t ${IMAGE_NAME} sh
+```
+docker exec -i -t ${CONTAINER_ID} sh
+```
+
+查看容器底层信息
+```
+docker inspect ${CONTAINER_ID}
 ```
 
 镜像打包
-```bash
+```
 docker commit -m "message" -a  "author" ${CONTAINER_ID}  ${NEW_IMAGE_NAME}
 ```
 
 标签
-```bash
-docker tag ${IMAGE_NAME}  ${NEW_IMAGE_NAME}
+```
+docker tag ${IMAGE_TAG}  ${NEW_IMAGE_TAG}
 ```
 
 推送至对应仓库
-```bash
+```
 docker push ${REGISTRY_URL}/${IMAGE_NAME}
 ```
 
 删除所有退出的容器
-```bash
+```
 docker rm $(docker ps -a | grep Exit | awk '{ print $1 }')
 ```
 
 删除所有名称为none的镜像
-```bash
+```
 docker images | grep none | awk '{print $3} ' | xargs docker rmi
 ```
 
