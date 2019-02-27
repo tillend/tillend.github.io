@@ -15,7 +15,7 @@ Linux系统中的每个文件和目录都有访问许可权限，本文内容为
 
 ## 用户组
 
-Linux 系统中的目录和文件的访问身份分为`user`, `group`,`others`,`all`,分别简写为`u`,`g`,`o`,`a`;
+Linux 系统中的目录和文件的访问身份分为`user`, `group`,`others`,`all`,分别简写为`u`,`g`,`o`,`a`
 
 - user 是文件的所有者
 - group 是文件所有者所在组的其他成员
@@ -37,7 +37,7 @@ Linux 系统中的目录和文件的访问身份分为`user`, `group`,`others`,`
 
 `chgrp`命令用于变更文件或目录的所属群组
 
-> chgrp [OPTION]... GROUP FILE... 
+> chgrp [OPTION]... GROUP FILE...    
 > chgrp [参数]... [所在组] 文件或目录
 
 将文件的所在组修改为`www`
