@@ -125,47 +125,47 @@ docker run -d \
 > 命令里使用`${CONTAINER_ID}`与`${CONTAINER_NAME}`均可
 
 查看容器状态
-```
+```bash
 docker ps | grep ${CONTAINER_ID}
 ```
 
 查看容器日志
-```
+```bash
 docker logs ${CONTAINER_ID}
 ```
 
 交互式进入容器中
-```
+```bash
 docker exec -i -t ${CONTAINER_ID} sh
 ```
 
 查看容器底层信息
-```
+```bash
 docker inspect ${CONTAINER_ID}
 ```
 
 镜像打包
-```
+```bash
 docker commit -m "message" -a  "author" ${CONTAINER_ID}  ${NEW_IMAGE_NAME}
 ```
 
 标签
-```
+```bash
 docker tag ${IMAGE_TAG}  ${NEW_IMAGE_TAG}
 ```
 
 推送至对应仓库
-```
+```bash
 docker push ${REGISTRY_URL}/${IMAGE_NAME}
 ```
 
 删除所有退出的容器
-```
+```bash
 docker rm $(docker ps -a | grep Exit | awk '{ print $1 }')
 ```
 
 删除所有名称为none的镜像
-```
+```bash
 docker images | grep none | awk '{print $3} ' | xargs docker rmi
 ```
 
