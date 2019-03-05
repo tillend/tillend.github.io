@@ -31,7 +31,9 @@ Log4j2.xml：（Logstash作为Appender）
 
 ##  Logstash
 
-> Logstah只支持log4j，使用log4j2时需要通过TCP插件调用
+Logstah只支持log4j，使用log4j2时需要通过TCP插件调用
+
+> Logstash启动时推荐配置`--config.reload.automatic`参数，自动重载配置
 
 ### Logstash input
 
