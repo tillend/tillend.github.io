@@ -123,6 +123,19 @@ filter {
 
 > 详细配置见[Json filter plugin](https://www.elastic.co/guide/en/logstash/current/plugins-filters-json.html)
 
+#### geoip
+
+`geoip`过滤器根据Maxmind geolite2数据库的数据，转换相应IP地址地理位置的信息。
+
+```
+geoip {
+    source => "client_ip"
+}
+```
+
+> 详细配置见[Geoip filter plugin](https://www.elastic.co/guide/en/logstash/current/plugins-filters-geoip.html)
+
+
 ### Logstash 完整配置
 
 Logstach.conf：
