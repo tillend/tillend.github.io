@@ -11,9 +11,18 @@ tags:
     - Timelion
 ---
 
+　　此系列文章将会描述Java框架**Spring Boot**、服务治理框架**Dubbo**、应用容器引擎**Docker**，及使用Spring Boot集成Dubbo、Mybatis等开源框架，其中穿插着Spring Boot中日志切面等技术的实现，然后通过gitlab-CI以持续集成为Docker镜像。
+
+　　**本文为Kibana 可视化图表及 Timelion 插件使用**
+
+> 本系列文章中所使用的框架版本为Spring Boot 2.0.3-RELEASE，Spring 5.0.7-RELEASE，Dubbo 2.6.2。
+
+
 ## Kibana 图表
 
 Kibana 是一款开源的数据分析和可视化平台，它是 Elastic Stack 成员之一，设计用于和 Elasticsearch 协作。您可以使用 Kibana 对 Elasticsearch 索引中的数据进行搜索、查看、交互操作。您可以很方便的利用图表、表格及地图对数据进行多元化的分析和呈现。
+
+> [Spring Boot Logstash日志采集](https://tillend.github.io/2018/11/22/springboot-logstash/)
 
 可视化大盘
 ![](/img/in-post/post-2019-03/dashboard.png)
