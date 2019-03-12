@@ -32,7 +32,7 @@ Metric -> Count
 
 #### 日志级别情况
 
-Metric -> Count
+Metric -> Count    
 Buckets -> Spilt Slices{Aggregation: Terms, Field: level.keyword, Order By:metric:Count, Order: Descending, Size:10}
 
 
@@ -40,14 +40,14 @@ Buckets -> Spilt Slices{Aggregation: Terms, Field: level.keyword, Order By:metri
 
 #### 访问情况
 
-Metric -> Y-Axis{Aggregation: Count}
+Metric -> Y-Axis{Aggregation: Count}    
 Buckets -> X-Axis{Aggregation: Date Histogram, Field: @timestamp, Interval: Auto}
 
 ![](/img/in-post/post-2019-03/access-situation.png)
 
 #### 响应时间情况
 
-Metric -> Y-Axis{Aggregation: Average, Field: resp_time_ms}
+Metric -> Y-Axis{Aggregation: Average, Field: resp_time_ms}    
 Buckets -> X-Axis{Aggregation: Date Histogram, Field: @timestamp, Interval: Auto}
 
 ![](/img/in-post/post-2019-03/response-time.png)
