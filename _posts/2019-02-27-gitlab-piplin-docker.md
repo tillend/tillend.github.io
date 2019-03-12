@@ -20,6 +20,14 @@ tags:
 
 > docker镜像标签、git标签、构建产物版本 应严格保持一致
 
+## Piplin
+
+Piplin是一款免费、开源的持续集成系统，适用于软件的自动化构建、测试和部署相关的各种应用场景。
+
+![](/img/in-post/post-2019-02/piplin.png)
+
+> 主要功能见[Piplin](http://piplin.com/docs)
+
 ## 部署流程
 
 1. 创建项目路径（构建服务器和部署服务器）
