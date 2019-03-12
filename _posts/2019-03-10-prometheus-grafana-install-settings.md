@@ -104,7 +104,7 @@ docker run -d \
 grafana/grafana
 ```
 
-### 监控报警
+#### 监控报警
 
 1. 添加监控通知渠道`Alerting->Notifications channels`
 2. 为图表设置报警配置`Alert Config`
@@ -128,7 +128,7 @@ grafana/grafana
 - [Kong dashboard](https://grafana.com/dashboards/7424)
 - [Elasticsearch Nginx Logs](https://grafana.com/dashboards/2292)
 
-### plugins
+#### plugins
 
 1.进入容器
 ```bash

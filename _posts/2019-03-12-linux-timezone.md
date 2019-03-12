@@ -2,7 +2,7 @@
 layout:     post
 title:      "Linux 查看及修改时区"
 subtitle:   "Linux Timezone"
-date:       2019-03-05 22:51:28
+date:       2019-03-12 22:51:28
 author:     "Tillend"
 catalog:      true
 header-img: "img/post-bg-alitrip.jpg"
