@@ -11,7 +11,12 @@ tags:
     - Grafana
 ---
 
-# Prometheus + Grafana
+　　此系列文章将会描述Java框架**Spring Boot**、服务治理框架**Dubbo**、应用容器引擎**Docker**，及使用Spring Boot集成Dubbo、Mybatis等开源框架，其中穿插着Spring Boot中日志切面等技术的实现，然后通过gitlab-CI以持续集成为Docker镜像。
+
+　　**本文为Prometheus + Grafana 可视化监控的介绍**
+
+> 本系列文章中所使用的框架版本为Spring Boot 2.0.3-RELEASE，Spring 5.0.7-RELEASE，Dubbo 2.6.2。
+
 
 `Prometheus`使用`pull`模式采集应用中暴露的时间序列数据(`push gateway`可使用`push`模式)，将监控数据持久化在磁盘中，最后通过`Grafana`提供的UI界面进行数据的展示、指标统计和错误报警。
 

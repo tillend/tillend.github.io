@@ -8,9 +8,16 @@ catalog:      true
 header-img: "img/post-bg-alitrip.jpg"
 tags:
     - Prometheus
-    - Grafana
+    - Micrometer
 ---
 
+　　此系列文章将会描述Java框架**Spring Boot**、服务治理框架**Dubbo**、应用容器引擎**Docker**，及使用Spring Boot集成Dubbo、Mybatis等开源框架，其中穿插着Spring Boot中日志切面等技术的实现，然后通过gitlab-CI以持续集成为Docker镜像。
+
+　　**本文为Prometheus 监控埋点**
+
+> 本系列文章中所使用的框架版本为Spring Boot 2.0.3-RELEASE，Spring 5.0.7-RELEASE，Dubbo 2.6.2。
+
+## Prometheus + Grafana
 
 SpringBoot2.x上已引入第三方实现的`metrics Facade`，默认与`micrometer`集成，而`micrometer`具有`Prometheus`的`MeterRegistry`规范的实现。<br/>
 `Prometheus`通过`Micrometer`拉取及处理`SpringBoot`应用中的监控数据，最后通过`Grafana`提供的UI界面进行数据的实时展示。

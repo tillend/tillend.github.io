@@ -1,5 +1,15 @@
-
-# Linux 修改时区
+---
+layout:     post
+title:      "Linux 查看及修改时区"
+subtitle:   "Linux Timezone"
+date:       2019-03-05 22:51:28
+author:     "Tillend"
+catalog:      true
+header-img: "img/post-bg-alitrip.jpg"
+tags:
+    - Linux
+    - Timezone
+---
 
 ## 查看时间及时区
 
@@ -15,7 +25,7 @@ cat /etc/timezone
 
 ## 修改时区
 
-1. 修改或设置Linux服务器时区
+1.修改或设置Linux服务器时区
 ```bash
 tzselect
 ```
@@ -30,19 +40,19 @@ Debian
 dpkg-reconfigure tzdata
 ```
 
-2. 设置环境变量
+2.设置环境变量
 ```bash
 echo "export TZ='Asia/Shanghai'"  >> /etc/profile
 source /etc/profile
 ```
 
-3. 创建软链接
+3.创建软链接
 ```bash
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 ```
 
 
-> 或使用`timedatectl`命令    
+> 使用`timedatectl`命令    
 > ```bash
 > timedatectl set-timezone Asia/Shanghai
 > ```

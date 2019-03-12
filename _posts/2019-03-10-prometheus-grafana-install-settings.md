@@ -2,7 +2,7 @@
 layout:     post
 title:      "Prometheus + Grafana 安装、配置及使用"
 subtitle:   "微服务框架（二十三）"
-date:       2019-03-12 22:51:28
+date:       2019-03-10 22:51:28
 author:     "Tillend"
 catalog:      true
 header-img: "img/post-bg-alitrip.jpg"
@@ -11,6 +11,13 @@ tags:
     - Grafana
     - Docker
 ---
+
+　　此系列文章将会描述Java框架**Spring Boot**、服务治理框架**Dubbo**、应用容器引擎**Docker**，及使用Spring Boot集成Dubbo、Mybatis等开源框架，其中穿插着Spring Boot中日志切面等技术的实现，然后通过gitlab-CI以持续集成为Docker镜像。
+
+　　**本文为Prometheus + Grafana 安装、配置及使用**
+
+> 本系列文章中所使用的框架版本为Spring Boot 2.0.3-RELEASE，Spring 5.0.7-RELEASE，Dubbo 2.6.2。
+
 
 ## Prometheus
 
