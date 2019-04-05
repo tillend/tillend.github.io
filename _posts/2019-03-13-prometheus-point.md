@@ -81,7 +81,7 @@ Spring boot支持Web及JMX(Java管理拓展)的健康指标监控，JMX的方式
 
 ### 依赖
 
-[通用Dubbo POM](http://docs.mmclick.com/algorithm/#/src/common/dubbo-common)已集成`spring boot`及`dubbo`的`actuator`起步依赖
+`spring boot`及`dubbo`的`actuator`起步依赖
 
 ```xml
 <dependency>
@@ -140,7 +140,7 @@ public class Starter {
 
 ### 依赖
 
-[通用Dubbo POM](http://docs.mmclick.com/algorithm/#/src/common/dubbo-common)已集成`dubbo-actuator`起步依赖
+`dubbo-actuator`起步依赖
 
 ```xml
 <dependency>
