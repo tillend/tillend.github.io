@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "ElasticSearch 索引模板"
-subtitle:   "微服务框架（十五）"
+subtitle:   "template"
 date:       2019-04-03 21:31:11
 author:     "Tillend"
 catalog:      true
@@ -20,15 +20,15 @@ tags:
 - `static`:它们只能在索引创建时或[闭合索引](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-open-close.html)上设置。
 - `dynamic`:可以使用[update-index-settings](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-update-settings.html) API在实时索引上更改它们。
 
-!> 更改闭合索引上的静态或动态索引设置可能会导致不正确的设置，如果不删除并重新创建索引，则无法纠正这些设置。
+> 更改闭合索引上的静态或动态索引设置可能会导致不正确的设置，如果不删除并重新创建索引，则无法纠正这些设置。
 
-> 相关设置详见[Index Modules](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules.html#index-modules)
+相关设置详见[Index Modules](https://www.elastic.co/guide/en/elasticsearch/reference/current/index-modules.html#index-modules)
 
 ## 模板操作
 
 ES的模板CRUD可由`ES REST API`或`Kibana Dev Tools`进行操作
 
-![](../../assets/kibana_devtools.png)
+![](/img/in-post/post-2019-04/kibana_devtools.png)
 
 #### 创建模板
 
