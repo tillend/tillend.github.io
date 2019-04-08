@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "ElasticSearch 索引模板"
-subtitle:   "templeate"
+subtitle:   "template"
 date:       2019-04-03 21:31:11
 author:     "Tillend"
 catalog:      true
