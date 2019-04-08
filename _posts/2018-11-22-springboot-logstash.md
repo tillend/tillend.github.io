@@ -60,7 +60,7 @@ input {
 
 #### grok
 
-#### 简述
+##### 简述
 
 Grok可以将非结构化日志数据解析为结构化和可查询的内容。
 
@@ -69,12 +69,12 @@ Grok可以将非结构化日志数据解析为结构化和可查询的内容。
 Logstash默认提供约120种模式。详见[grok原生正则](https://github.com/logstash-plugins/logstash-patterns-core/tree/master/patterns)，亦可在`patterns_dir`参数使用自定义的正则模式串
 
 
-#### 工作原理
+##### 工作原理
 
 Grok的工作原理是将文本模式组合成与日志匹配的内容。grok模式的语法是 %{SYNTAX:SEMANTIC}
 
 
-#### 示例
+##### 示例
 ```
 55.3.244.1 GET /index.html 15824 0.043
 ```
