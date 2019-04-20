@@ -2,7 +2,7 @@
 layout:     post
 title:      "Logstash Nginx 日志上报"
 subtitle:   "微服务框架（二十九）"
-date:       2019-04-12 21:51:28
+date:       2019-04-14 21:51:28
 author:     "Tillend"
 catalog:      true
 header-img: "img/post-bg-alitrip.jpg"
