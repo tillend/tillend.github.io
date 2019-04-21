@@ -1,13 +1,11 @@
  > Consider about who I want to be
 
-Introduction
+Hey, I'm Ricardo, a software engineer. I previously worked as Java Back-End Engineer at [Vip][2] and [Linghit][3]. At present, we are keen on micro-service architecture.
 
-job
-
-Project experience
-
-##### Something
+##### About
 
 - [CSDN][1]
 
 [1]: https://blog.csdn.net/why_still_confused
+[2]: https://www.vip.com
+[3]: https://www.linghit.com

@@ -12,6 +12,15 @@ tags:
     - Gitlab
 ---
 
+
+　　此系列文章将会描述Java框架**Spring Boot**、服务治理框架**Dubbo**、应用容器引擎**Docker**，及使用Spring Boot集成Dubbo、Mybatis等开源框架，其中穿插着Spring Boot中日志切面等技术的实现，然后通过gitlab-CI以持续集成为Docker镜像。
+
+　　**本文为Docker项目发布流程**
+
+> 本系列文章中所使用的框架版本为Spring Boot 2.0.3-RELEASE，Spring 5.0.7-RELEASE，Dubbo 2.6.2。
+
+## Piplin部署
+
 > piplin的详细部署流程见[piplin部署](https://tillend.github.io/2019/02/27/gitlab-piplin-docker/)
 
 目前所有的算法微服务暴露两个端口，9700段为服务调用端口，22800段为服务QOS端口，
