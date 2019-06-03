@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "struts2导出Excel"
+title:      "Struts2导出Excel报表"
 subtitle:   ""
 date:       2019-06-03 21:51:28
 author:     "Tillend"
@@ -13,7 +13,11 @@ tags:
 ---
 
 
-## struts2导出Excel
+## Struts2导出Excel报表
+
+本文内容为
+- html button触发调取Action接口
+- Struts2 Action封装数据，构造Excel
 
 #### html
 
