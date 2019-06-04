@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "Struts2导出Excel报表"
+title:      "Struts2 导出 Excel 报表"
 subtitle:   ""
 date:       2019-06-03 21:51:28
 author:     "Tillend"
@@ -13,11 +13,13 @@ tags:
 ---
 
 
-## Struts2导出Excel报表
+## Struts2 导出 Excel 报表
 
 本文内容为
-- html button触发调取Action接口
-- Struts2 Action封装数据，构造Excel
+- `Html button` 绑定按钮事件
+- `downLoadIframe`调取下载接口
+- `Struts2 Action` 业务调用及封装数据，构造 Excel 报表
+
 
 #### html
 
@@ -32,7 +34,7 @@ tags:
 
 > `iframe`标签会创建包含另外一个文档的内联框架，跟当前`window`框架是父子关系，利用`iframe`，我们可以处理异步无刷新上传、下载文件
 
-```javascripts
+```js
 <script type="text/javascript">
 function exportExcel(){
 	var params = getConParams();
@@ -94,7 +96,7 @@ public class UserAction extends ManagerBaseAction{
 
 		try {
 			Workbook wb = new SXSSFWorkbook();
-			ExcelUtil.exportExcel2007new(wb, sheetName, columnNames, allRows, out);
+			ExcelUtil.exportExcel2007(wb, sheetName, columnNames, allRows, out);
 			wb.write(out);
 			out.flush();
 		} catch (Exception e) {
@@ -127,5 +129,51 @@ public class UserAction extends ManagerBaseAction{
 		}
 		return resList;
 	}
+}
+```
+
+#### BaseAction
+
+`response`设置`Header`及`Content-Type`
+```java
+
+public void renderExportFile(String fileName, String contentType) throws Exception {
+	HttpServletResponse response = getResponse();
+	response.setContentType(contentType);
+	response.setHeader("Content-Disposition", "attachment;filename=" + new String(fileName.getBytes("utf-8"), "iso8859-1") + "");
+	response.setHeader("Cache-Control", "private");
+	response.flushBuffer();
+}
+```
+
+#### Util
+
+`Excel`导出工具类
+```java
+public static OutputStream exportExcel2007(Workbook wb, String sheetName, List<String> columnNames, List<List<String>> allRows, OutputStream out) throws Exception{
+	CreationHelper createHelper = wb.getCreationHelper();
+	Sheet sheet = wb.createSheet(sheetName);
+	short index = 0;
+	while(index < columnNames.size()) {
+		sheet.setColumnWidth(index, 6500);
+		index++;
+	}
+	Row row;
+	Cell cell;
+	row = sheet.createRow(0);
+	for(int j = 0; j < columnNames.size(); j ++){
+		cell = row.createCell(j);
+		cell.setCellValue(createHelper.createRichTextString(columnNames.get(j)));
+	}
+	for(int i = 1; i <= allRows.size(); i ++){
+		row = sheet.createRow(i);
+		List<String> rowData = allRows.get(i - 1);
+		for(int j = 0; j < rowData.size(); j ++){
+			cell = row.createCell(j);
+			String value = rowData.get(j);
+			cell.setCellValue(createHelper.createRichTextString(value));
+		}
+	}
+	return out;
 }
 ```
