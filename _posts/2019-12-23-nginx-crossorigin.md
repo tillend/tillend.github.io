@@ -29,3 +29,10 @@ tags:
 - 使用下列方法之一：`GET`、`HEAD`、`POST`
 - `Content-Type`的值仅限于下列三者之一：`text/plain`、`multipart/form-data`、`application/x-www-form-urlencoded`
 - ...
+
+> 所有简单请求见[MDN 简单请求](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS#%E8%8B%A5%E5%B9%B2%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%9C%BA%E6%99%AF)
+
+### 预检请求（preflight request）
+与前述简单请求不同，**需预检的请求**要求必须首先使用 `OPTIONS`   方法发起一个预检请求到服务器，**以获知服务器是否允许该实际请求**。"预检请求“的使用，可以避免跨域请求对服务器的用户数据产生未预期的影响。
+
+> 对于附带身份凭证的请求，服务器不得设置`Access-Control-Allow-Origin`的值为“*”，需设置为具体的域名，否则请求会失败。
