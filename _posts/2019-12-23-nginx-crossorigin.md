@@ -36,3 +36,43 @@ tags:
 与前述简单请求不同，**需预检的请求**要求必须首先使用 `OPTIONS`   方法发起一个预检请求到服务器，**以获知服务器是否允许该实际请求**。"预检请求“的使用，可以避免跨域请求对服务器的用户数据产生未预期的影响。
 
 > 对于附带身份凭证的请求，服务器不得设置`Access-Control-Allow-Origin`的值为“*”，需设置为具体的域名，否则请求会失败。
+
+## Nginx跨域配置
+[NGINX](https://www.nginx.com/resources/wiki/)是一个免费的，开源的高性能HTTP服务器和反向代理，以及`IMAP / POP3`代理服务器。`NGINX`以其高性能，稳定性，丰富的功能集，简单的配置和低资源消耗而闻名。
+
+通常在`nginx`下设置通用配置，以解决域名下的跨域问题
+### 简单请求跨域配置
+```conf
+Access-Control-Allow-Origin: *.test.com
+Access-Control-Allow-Credentials: true
+```
+### 预检请求过程
+当需要支持跨域的请求不是简单请求时，需特殊处理预检请求所发起的`OPTIONS`请求
+
+```conf
+set $cors '';
+if ($http_origin ~* 'https?://(localhost|www\.example\.com|m\.example\.com)') {
+        set $cors 'true';
+}
+
+if ($cors = 'true') {
+        add_header 'Access-Control-Allow-Origin' "$http_origin";
+        add_header 'Access-Control-Allow-Credentials' 'true';
+        add_header 'Access-Control-Allow-Methods' 'GET, POST, PUT, DELETE, OPTIONS';
+        add_header 'Access-Control-Allow-Headers' 'Accept,Authorization,Cache-Control,Content-Type,DNT,If-Modified-Since,Keep-Alive,Origin,User-Agent,X-Mx-ReqToken,X-Requested-With';
+}
+
+if ($request_method = 'OPTIONS') {
+        return 204;
+}
+```
+
+下图为，以真实请求的HTTP方法及[请求首部字段](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS#HTTP_%E8%AF%B7%E6%B1%82%E9%A6%96%E9%83%A8%E5%AD%97%E6%AE%B5)发起对应的预检请求
+
+![](https://mdn.mozillademos.org/files/16753/preflight_correct.png)
+
+
+
+---
+参考资料：
+1. [HTTP访问控制（CORS）](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS)
