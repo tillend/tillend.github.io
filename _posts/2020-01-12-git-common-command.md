@@ -65,3 +65,37 @@ tags:
 ```
 
 *注意：**rebase 会改写历史记录，若该分支的提交已被其他使用者修改时，不建议使用*** 
+
+### 可选操作
+> - p, `pick` 保留该commit
+> - r, `reword`  保留该commit，但修改注释
+> - e, `edit`  保留该commit，但修改提交
+> - s, `squash` 保留该commit，将其前一个commit合并
+> - f, `fixup` 操作与`squash`相同，但丢弃注释
+> - x, `exec` 执行shell命令
+> - d, `drop` 丢弃该commit
+
+## cherry-pick
+`git-cherry-pick` 能应用(合并)已经存在的commit，即选择合并某个特定commit
+
+原始分支
+```code
+	  A---B---C topic
+	 /
+    D---E---F---G master
+```
+
+假设commit C的版本号为`7289a5`，在`master`分支使用`git cherry-pick 7289a5`
+```code
+	  A---B---C topic
+	 /
+    D---E---F---G---C master
+```
+
+---
+参考资料：
+1. [git merge](https://git-scm.com/docs/git-merge)
+2. [git book](https://git-scm.com/book/zh/v2)
+3. [Git Community Book 中文版](https://www.git-tower.com/learn/git/ebook/cn/command-line/advanced-topics/rebase)
+4. [彻底搞懂 Git-Rebase](http://jartto.wang/2018/12/11/git-rebase/)
+5. [Git合并特定commits 到另一个分支](https://blog.csdn.net/ybdesire/article/details/42145597)
