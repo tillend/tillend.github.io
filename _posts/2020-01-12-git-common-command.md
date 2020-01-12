@@ -32,3 +32,36 @@ tags:
 > `git merge --abort`将中止合并过程，并尝试重建合并前的状态。但是，如果在合并开始时有未提交的更改（尤其是在合并开始后进一步修改了这些更改），则`git merge --abort`在某些情况下将无法重建原始更改。因此警告：**不建议运行`git merge`合并重要的未提交更改**
 
 ## rebase
+
+`git rebase`的使用场景
+1. 合并多次`commit`为单次`commit`
+2. 分支合并
+
+
+变基的原理
+1. 找到这两个分支（即当前分支 topic、变基操作的目标基底分支 master）的最近共同祖先  D
+2. 对比当前分支相对于该祖先的历次提交，提取相应的修改并存为临时文件(A+B+C=C')
+3. 然后将当前分支指向目标基底 C', 最后以此将之前另存为临时文件的修改依序应用。
+
+
+原始分支
+```code
+	  A---B---C topic
+	 /
+    D---E---F---G master
+```
+
+在`topic`分支使用`git rebase master`
+
+```code
+	  C' topic
+	 /
+    D---E---F---G maste
+```
+
+`checkout`至`master`分支，使用命令`git merge topic`
+```code
+    D---E---F---G---C' master
+```
+
+*注意：**rebase 会改写历史记录，若该分支的提交已被其他使用者修改时，不建议使用*** 
